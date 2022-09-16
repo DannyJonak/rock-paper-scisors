@@ -57,5 +57,19 @@ function game() {
         let computerSelection = getComputerChoice();
         let playerSelection = getPlayerSelection();
         
+        //find winner between player and computer
+        let roundOutcome = playRound(playerSelection, computerSelection);
+
+        if (!roundOutcome) {
+            console.log("This round is a tie!");
+        } else if (roundOutcome === 1) {
+            console.log("You win this round!")
+            playerScore += 1;
+        } else {
+            console.log("You lose this round!")
+            computerScore += 1;
+        }
+        //show current score
+        console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
     }
 }
