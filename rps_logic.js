@@ -19,15 +19,19 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1, playerSelection.length).toLowerCase();
 
     if (playerSelection === computerSelection) {
-        return "It's a tie!";
+        return 0;
     }
     if (playerSelection === "Paper" && computerSelection === "Scissors") {
-        return "You Lose! Scissors beats Paper.";
+        return -1;
     } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-        return "You Win! Paper beats Scissors."
+        return 1;
     } else if (playerSelection < computerSelection) {
-        return `You Win! ${playerSelection} beats ${computerSelection}.`;
+        return 1;
     } else {
-        return `You Lose! ${computerSelection} beats ${playerSelection}`;
+        return -1;
     }
+}
+
+function game() {
+    
 }
