@@ -5,11 +5,11 @@ function getComputerChoice() {
 
     //convert the random number guess into one of rock, paper, or scissors depending on its size
     if (guessNum < 1/3) {
-        return "Rock";
+        return "rock";
     } else if (guessNum >= 1/3 && guessNum < 2/3) {
-        return "Paper";
+        return "paper";
     } else {
-        return "Scissors";
+        return "scissors";
     }
 }
 
@@ -21,9 +21,9 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return 0;
     }
-    if (playerSelection === "Paper" && computerSelection === "Scissors") {
+    if (playerSelection === "paper" && computerSelection === "scissors") {
         return -1;
-    } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+    } else if (playerSelection === "scissors" && computerSelection === "paper") {
         return 1;
     } else if (playerSelection < computerSelection) {
         return 1;
@@ -32,12 +32,12 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-
+function getPlayerSelection() {
+    //prompt user to choose rock, paper or scissors. Format their response with all lowercase letters.
+    let playerSelection = prompt("Choose rock, paper, or scissors!").toLowerCase();
+    return playerSelection;
+}
 
 function game() {
-    for (let i = 0; i < 5; i++) {
-        //get computer and player choices
-        let computerSelection = getComputerChoice();
-        let playerSelection = prompt("Choose rock, paper, or scissors!");
-    }
+    
 }
