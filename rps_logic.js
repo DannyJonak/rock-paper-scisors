@@ -16,8 +16,6 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     //returns winner of playerSelection and computerSelection in a game of rock paper scissors
 
-    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1, playerSelection.length).toLowerCase();
-
     if (playerSelection === computerSelection) {
         return 0;
     }
@@ -33,11 +31,31 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function getPlayerSelection() {
-    //prompt user to choose rock, paper or scissors. Format their response with all lowercase letters.
-    let playerSelection = prompt("Choose rock, paper, or scissors!").toLowerCase();
-    return playerSelection;
+
+    //ask player to provide a choice until a valid choice is provided
+    while(true) {
+        //prompt user to choose rock, paper or scissors. Format their response with all lowercase letters.
+        let playerSelection = prompt("Choose rock, paper, or scissors!").toLowerCase();
+
+        //check that player entered a valid choice and return choice if valid
+        if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
+            return playerSelection;
+        }
+    }
 }
 
 function game() {
-    
+
+    //initialize variables to keep track of player/computer scores
+    let playerScore = 0;
+    let computerScore = 0;
+
+    //play 5 games
+    for (let i = 0; i < 5; i++) {
+
+        //get computer and player choices
+        let computerSelection = getComputerChoice();
+        let playerSelection = getPlayerSelection();
+        
+    }
 }
