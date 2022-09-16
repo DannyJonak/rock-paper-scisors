@@ -5,11 +5,11 @@ function getComputerChoice() {
 
     //convert the random number guess into one of rock, paper, or scissors depending on its size
     if (guessNum < 1/3) {
-        return "rock";
+        return "Rock";
     } else if (guessNum >= 1/3 && guessNum < 2/3) {
-        return "paper";
+        return "Paper";
     } else {
-        return "scissors";
+        return "Scissors";
     }
 }
 
@@ -19,9 +19,9 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return 0;
     }
-    if (playerSelection === "paper" && computerSelection === "scissors") {
+    if (playerSelection === "Paper" && computerSelection === "Scissors") {
         return -1;
-    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+    } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
         return 1;
     } else if (playerSelection < computerSelection) {
         return 1;
@@ -35,10 +35,11 @@ function getPlayerSelection() {
     //ask player to provide a choice until a valid choice is provided
     while(true) {
         //prompt user to choose rock, paper or scissors. Format their response with all lowercase letters.
-        let playerSelection = prompt("Choose rock, paper, or scissors!").toLowerCase();
+        let playerSelection = prompt("Choose rock, paper, or scissors!");
+        playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1, playerSelection.length).toLowerCase();
 
         //check that player entered a valid choice and return choice if valid
-        if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
+        if (playerSelection === "Rock" || playerSelection === "Paper" || playerSelection === "Scissors") {
             return playerSelection;
         }
     }
@@ -63,10 +64,10 @@ function game() {
         if (!roundOutcome) {
             console.log("This round is a tie!");
         } else if (roundOutcome === 1) {
-            console.log("You win this round!")
+            console.log(`You win this round! ${playerSelection} beats ${computerSelection}!`);
             playerScore += 1;
         } else {
-            console.log("You lose this round!")
+            console.log(`You lose this round! ${computerSelection} beats ${playerSelection}!`);
             computerScore += 1;
         }
         //show current score
