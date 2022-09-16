@@ -3,7 +3,8 @@ function getComputerChoice() {
     //get a random number between 0 and 1 to use as a guess
     let guessNum = Math.random();
 
-    //convert the random number guess into one of rock, paper, or scissors depending on its size
+    //Convert the random number guess into one of rock, paper, or scissors depending on which third of [0,1) it falls into.
+    //This should make the probability of choosing each option about 1/3.
     if (guessNum < 1/3) {
         return "Rock";
     } else if (guessNum >= 1/3 && guessNum < 2/3) {
