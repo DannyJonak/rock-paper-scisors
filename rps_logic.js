@@ -75,7 +75,7 @@ function game() {
         //show current score
         console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`);
     }
-    //get total score and find overall winner
+    //find overall winner
     console.log("Game Over!");
     return ((playerScore > computerScore) ? "You Win!"
             : (playerScore < computerScore) ? "You Lose!"
