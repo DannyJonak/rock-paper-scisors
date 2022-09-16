@@ -51,7 +51,7 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
 
-    //play 5 games
+    //play 5 rounds
     for (let i = 0; i < 5; i++) {
 
         //get computer and player choices
@@ -61,16 +61,23 @@ function game() {
         //find winner between player and computer
         let roundOutcome = playRound(playerSelection, computerSelection);
 
+        console.log(`You chose: ${playerSelection}, Computer chose: ${computerSelection}`)
+
         if (!roundOutcome) {
             console.log("This round is a tie!");
         } else if (roundOutcome === 1) {
-            console.log(`You win this round! ${playerSelection} beats ${computerSelection}!`);
+            console.log("You win this round!");
             playerScore += 1;
         } else {
-            console.log(`You lose this round! ${computerSelection} beats ${playerSelection}!`);
+            console.log("You lose this round!");
             computerScore += 1;
         }
         //show current score
-        console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
+        console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`);
     }
+    //get total score and find overall winner
+    console.log("Game Over!");
+    return ((playerScore > computerScore) ? "You Win!"
+            : (playerScore < computerScore) ? "You Lose!"
+            : "Tie!");
 }
