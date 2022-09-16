@@ -32,13 +32,13 @@ function playRound(playerSelection, computerSelection) {
 
 function getPlayerSelection() {
 
-    //ask player to provide a choice until a valid choice is provided
+    //use while loop to keep prompting user for a choice if their previous choice is invalid i.e. not one of rock, paper, or scissors
     while(true) {
-        //prompt user to choose rock, paper or scissors. Format their response with all lowercase letters.
         let playerSelection = prompt("Choose rock, paper, or scissors!");
+        //format playerSelection with only the first letter capitalized
         playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1, playerSelection.length).toLowerCase();
 
-        //check that player entered a valid choice and return choice if valid
+        //return if player made a valid choice
         if (playerSelection === "Rock" || playerSelection === "Paper" || playerSelection === "Scissors") {
             return playerSelection;
         }
@@ -47,23 +47,19 @@ function getPlayerSelection() {
 
 function game() {
 
-    //initialize variables to keep track of player/computer scores
     let playerScore = 0;
     let computerScore = 0;
 
-    //play 5 rounds
+    //play 5 rounds of rock paper scissors
     for (let i = 0; i < 5; i++) {
 
         //get computer and player choices
         let computerSelection = getComputerChoice();
         let playerSelection = getPlayerSelection();
         
-        //play a round and get the result
         let roundOutcome = playRound(playerSelection, computerSelection);
-
         console.log(`You chose: ${playerSelection}, Computer chose: ${computerSelection}`)
 
-        //find winner
         if (!roundOutcome) {
             console.log("This round is a tie!");
         } else if (roundOutcome === 1) {
@@ -73,7 +69,7 @@ function game() {
             console.log("You lose this round!");
             computerScore += 1;
         }
-        //show current score
+
         console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`);
     }
     //find overall winner
