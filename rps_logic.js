@@ -36,26 +36,57 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function displayChoices(playerSelection, computerSelection) {
+    const playerDisplay = document.querySelector('.player-selection');
+    const computerDisplay = document.querySelector('.computer-selection');
+
+    playerDisplay.textContent = `${playerSelection}`;
+    computerDisplay.textContent = `${computerSelection}`;
+}
+
+function displayScores(playerScore, computerScore) {
+    const playerDisplay = document.querySelector('.player-score');
+    const computerDisplay = document.querySelector('.computer-score');
+
+    playerDisplay.textContent = `${playerScore}`;
+    computerDisplay.textContent = `${computerScore}`;
+}
+
 const rock_btn = document.querySelector('#Rock');
 const paper_btn = document.querySelector('#Paper');
 const scissors_btn = document.querySelector('#Scissors');
 
+let playerScore = 0;
+let computerScore = 0;
+
 rock_btn.addEventListener('click', () => {
     const playerSelection = 'Rock';
     const computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
+    displayChoices(playerSelection, computerSelection);
+    const result = playRound(playerSelection, computerSelection);
+    if (result === 1) playerScore++;
+    if (result === -1) computerScore++;
+    displayScores(playerScore, computerScore)
 });
 
 paper_btn.addEventListener('click', () => {
     const playerSelection = 'Paper';
     const computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
+    displayChoices(playerSelection, computerSelection);
+    const result = playRound(playerSelection, computerSelection);
+    if (result === 1) playerScore++;
+    if (result === -1) computerScore++;
+    displayScores(playerScore, computerScore)
 });
 
 scissors_btn.addEventListener('click', () => {
     const playerSelection = 'Scissors';
     const computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
+    displayChoices(playerSelection, computerSelection);
+    const result = playRound(playerSelection, computerSelection);
+    if (result === 1) playerScore++;
+    if (result === -1) computerScore++;
+    displayScores(playerScore, computerScore)
 });
 
 
