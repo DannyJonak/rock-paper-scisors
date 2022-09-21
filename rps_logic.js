@@ -74,44 +74,55 @@ function playGame() {
     let playerScore = 0;
     let computerScore = 0;
 
-    const rock_btn = document.querySelector('#Rock');
-    const paper_btn = document.querySelector('#Paper');
-    const scissors_btn = document.querySelector('#Scissors');
+    const choices = document.querySelector('.choices');
+
+    const rock_btn = document.createElement('button');
+    rock_btn.setAttribute('id', 'Rock');
+    rock_btn.textContent = 'Rock';
+    const paper_btn = document.createElement('button');
+    paper_btn.setAttribute('id', 'Paper');
+    paper_btn.textContent = 'Paper';
+    const scissors_btn = document.createElement('button');
+    scissors_btn.setAttribute('id', 'Scissors');
+    scissors_btn.textContent = 'Scissors';
+
+    choices.appendChild(rock_btn);
+    choices.appendChild(paper_btn);
+    choices.appendChild(scissors_btn);
 
     rock_btn.addEventListener('click', () => {
         const playerSelection = 'Rock';
         const computerSelection = getComputerChoice();
-        displayChoices(playerSelection, computerSelection);
         const result = playRound(playerSelection, computerSelection);
         if (result === 1) playerScore++;
         if (result === -1) computerScore++;
-        displayScores(playerScore, computerScore)
+        displayChoices(playerSelection, computerSelection);
+        displayScores(playerScore, computerScore);
     });
     
     paper_btn.addEventListener('click', () => {
         const playerSelection = 'Paper';
         const computerSelection = getComputerChoice();
-        displayChoices(playerSelection, computerSelection);
         const result = playRound(playerSelection, computerSelection);
         if (result === 1) playerScore++;
         if (result === -1) computerScore++;
-        displayScores(playerScore, computerScore)
+        displayChoices(playerSelection, computerSelection);
+        displayScores(playerScore, computerScore);
     });
     
     scissors_btn.addEventListener('click', () => {
         const playerSelection = 'Scissors';
         const computerSelection = getComputerChoice();
-        displayChoices(playerSelection, computerSelection);
         const result = playRound(playerSelection, computerSelection);
         if (result === 1) playerScore++;
         if (result === -1) computerScore++;
-        displayScores(playerScore, computerScore)
+        displayChoices(playerSelection, computerSelection);
+        displayScores(playerScore, computerScore);
     });
 }
 
 const newGameBtn = document.querySelector('#new-game');
 newGameBtn.addEventListener('click', () => {
-    newGameBtn.textContent = 'New Game';
     resetDisplay();
     playGame();
 })
