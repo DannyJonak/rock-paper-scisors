@@ -52,45 +52,52 @@ function displayScores(playerScore, computerScore) {
     computerDisplay.textContent = `${computerScore}`;
 }
 
-const rock_btn = document.querySelector('#Rock');
-const paper_btn = document.querySelector('#Paper');
-const scissors_btn = document.querySelector('#Scissors');
+function isOver(playerScore, computerScore) {
+    return (playerScore === 5) || (computerScore === 5);
+}
 
-let playerScore = 0;
-let computerScore = 0;
+function playGame() {
 
-rock_btn.addEventListener('click', () => {
-    const playerSelection = 'Rock';
-    const computerSelection = getComputerChoice();
-    displayChoices(playerSelection, computerSelection);
-    const result = playRound(playerSelection, computerSelection);
-    if (result === 1) playerScore++;
-    if (result === -1) computerScore++;
-    displayScores(playerScore, computerScore)
-});
+    let playerScore = 0;
+    let computerScore = 0;
 
-paper_btn.addEventListener('click', () => {
-    const playerSelection = 'Paper';
-    const computerSelection = getComputerChoice();
-    displayChoices(playerSelection, computerSelection);
-    const result = playRound(playerSelection, computerSelection);
-    if (result === 1) playerScore++;
-    if (result === -1) computerScore++;
-    displayScores(playerScore, computerScore)
-});
+    const rock_btn = document.querySelector('#Rock');
+    const paper_btn = document.querySelector('#Paper');
+    const scissors_btn = document.querySelector('#Scissors');
 
-scissors_btn.addEventListener('click', () => {
-    const playerSelection = 'Scissors';
-    const computerSelection = getComputerChoice();
-    displayChoices(playerSelection, computerSelection);
-    const result = playRound(playerSelection, computerSelection);
-    if (result === 1) playerScore++;
-    if (result === -1) computerScore++;
-    displayScores(playerScore, computerScore)
-});
+    rock_btn.addEventListener('click', () => {
+        const playerSelection = 'Rock';
+        const computerSelection = getComputerChoice();
+        displayChoices(playerSelection, computerSelection);
+        const result = playRound(playerSelection, computerSelection);
+        if (result === 1) playerScore++;
+        if (result === -1) computerScore++;
+        displayScores(playerScore, computerScore)
+    });
+    
+    paper_btn.addEventListener('click', () => {
+        const playerSelection = 'Paper';
+        const computerSelection = getComputerChoice();
+        displayChoices(playerSelection, computerSelection);
+        const result = playRound(playerSelection, computerSelection);
+        if (result === 1) playerScore++;
+        if (result === -1) computerScore++;
+        displayScores(playerScore, computerScore)
+    });
+    
+    scissors_btn.addEventListener('click', () => {
+        const playerSelection = 'Scissors';
+        const computerSelection = getComputerChoice();
+        displayChoices(playerSelection, computerSelection);
+        const result = playRound(playerSelection, computerSelection);
+        if (result === 1) playerScore++;
+        if (result === -1) computerScore++;
+        displayScores(playerScore, computerScore)
+    });
+}
 
-
-
+const newGameBtn = document.querySelector('#new-game');
+newGameBtn.addEventListener('click', () => {playGame()})
 
 
 
