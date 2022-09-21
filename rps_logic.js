@@ -18,38 +18,30 @@ function playRound(playerSelection, computerSelection) {
     //returns winner of playerSelection and computerSelection in a game of rock paper scissors
 
     if (playerSelection === computerSelection) {
-        console.log(0);
         return 0;
     }
     if (playerSelection === "Paper" && computerSelection === "Scissors") {
-        console.log(-1);
         return -1;
     } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-        console.log(1);
         return 1;
     } else if (playerSelection < computerSelection) {
-        console.log(1)
         return 1;
     } else {
-        console.log(-1);
         return -1;
     }
 }
 
-function displayChoices(playerSelection, computerSelection) {
-    const playerDisplay = document.querySelector('.player-selection');
-    const computerDisplay = document.querySelector('.computer-selection');
+function updateDisplay(playerSelection, computerSelection, playerScore, computerScore) {
 
-    playerDisplay.textContent = `${playerSelection}`;
-    computerDisplay.textContent = `${computerSelection}`;
-}
+    const playerSelectionDisplay = document.querySelector('.player-selection');
+    const computerSelectionDisplay = document.querySelector('.computer-selection');
+    const playerScoreDisplay = document.querySelector('.player-score');
+    const computerScoreDisplay = document.querySelector('.computer-score');
 
-function displayScores(playerScore, computerScore) {
-    const playerDisplay = document.querySelector('.player-score');
-    const computerDisplay = document.querySelector('.computer-score');
-
-    playerDisplay.textContent = `${playerScore}`;
-    computerDisplay.textContent = `${computerScore}`;
+    playerSelectionDisplay.textContent = `${playerSelection}`;
+    computerSelectionDisplay.textContent = `${computerSelection}`;
+    playerScoreDisplay.textContent = `${playerScore}`;
+    computerScoreDisplay.textContent = `${computerScore}`;
 }
 
 function isOver(playerScore, computerScore) {
@@ -120,8 +112,7 @@ function playGame() {
         const result = playRound(playerSelection, computerSelection);
         if (result === 1) playerScore++;
         if (result === -1) computerScore++;
-        displayChoices(playerSelection, computerSelection);
-        displayScores(playerScore, computerScore);
+        updateDisplay(playerSelection, computerSelection, playerScore, computerScore);
         if (isOver(playerScore, computerScore)) endGame(playerScore, computerScore);
         
     });
@@ -132,8 +123,7 @@ function playGame() {
         const result = playRound(playerSelection, computerSelection);
         if (result === 1) playerScore++;
         if (result === -1) computerScore++;
-        displayChoices(playerSelection, computerSelection);
-        displayScores(playerScore, computerScore);
+        updateDisplay(playerSelection, computerSelection, playerScore, computerScore);
         if (isOver(playerScore, computerScore)) endGame(playerScore, computerScore);
     });
     
@@ -143,8 +133,7 @@ function playGame() {
         const result = playRound(playerSelection, computerSelection);
         if (result === 1) playerScore++;
         if (result === -1) computerScore++;
-        displayChoices(playerSelection, computerSelection);
-        displayScores(playerScore, computerScore);
+        updateDisplay(playerSelection, computerSelection, playerScore, computerScore);
         if (isOver(playerScore, computerScore)) endGame(playerScore, computerScore);
     });
 }
