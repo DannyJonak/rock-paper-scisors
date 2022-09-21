@@ -56,6 +56,19 @@ function isOver(playerScore, computerScore) {
     return (playerScore === 5) || (computerScore === 5);
 }
 
+function resetDisplay() {
+
+    const playerSelectDisplay = document.querySelector('.player-selection');
+    const computerSelectDisplay = document.querySelector('.computer-selection');
+    const playerScoreDisplay = document.querySelector('.player-score');
+    const computerScoreDisplay = document.querySelector('.computer-score');
+    
+    playerSelectDisplay.textContent = '';
+    computerSelectDisplay.textContent = '';
+    playerScoreDisplay.textContent = 0;
+    computerScoreDisplay.textContent = 0;
+}
+
 function playGame() {
 
     let playerScore = 0;
@@ -97,7 +110,11 @@ function playGame() {
 }
 
 const newGameBtn = document.querySelector('#new-game');
-newGameBtn.addEventListener('click', () => {playGame()})
+newGameBtn.addEventListener('click', () => {
+    newGameBtn.textContent = 'New Game';
+    resetDisplay();
+    playGame();
+})
 
 
 
