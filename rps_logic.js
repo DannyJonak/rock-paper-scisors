@@ -56,7 +56,7 @@ function isOver(playerScore, computerScore) {
     return (playerScore === 5) || (computerScore === 5);
 }
 
-function resetDisplay() {
+function resetGame() {
 
     const playerSelectDisplay = document.querySelector('.player-selection');
     const computerSelectDisplay = document.querySelector('.computer-selection');
@@ -72,6 +72,10 @@ function resetDisplay() {
     computerSelectDisplay.textContent = '';
     playerScoreDisplay.textContent = 0;
     computerScoreDisplay.textContent = 0;
+}
+
+function endGame() {
+
 }
 
 function playGame() {
@@ -128,7 +132,7 @@ function playGame() {
 
 const newGameBtn = document.querySelector('#new-game');
 newGameBtn.addEventListener('click', () => {
-    resetDisplay();
+    resetGame();
     playGame();
 })
 
