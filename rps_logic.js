@@ -62,6 +62,11 @@ function resetDisplay() {
     const computerSelectDisplay = document.querySelector('.computer-selection');
     const playerScoreDisplay = document.querySelector('.player-score');
     const computerScoreDisplay = document.querySelector('.computer-score');
+    const choices = document.querySelector('.choices');
+
+    while(choices.firstChild) {
+        choices.removeChild(choices.firstChild);
+    }
     
     playerSelectDisplay.textContent = '';
     computerSelectDisplay.textContent = '';
