@@ -84,10 +84,7 @@ function endGame(playerScore, computerScore) {
                                                         : "It's a Tie!";
 }
 
-function playGame() {
-
-    let playerScore = 0;
-    let computerScore = 0;
+function createChoiceButtons() {
 
     const choices = document.querySelector('.choices');
 
@@ -104,6 +101,18 @@ function playGame() {
     choices.appendChild(rock_btn);
     choices.appendChild(paper_btn);
     choices.appendChild(scissors_btn);
+}
+
+function playGame() {
+
+    let playerScore = 0;
+    let computerScore = 0;
+
+    createChoiceButtons();
+
+    const rock_btn = document.querySelector('#Rock');
+    const paper_btn = document.querySelector('#Paper');
+    const scissors_btn = document.querySelector('#Scissors');
 
     rock_btn.addEventListener('click', () => {
         const playerSelection = 'Rock';
