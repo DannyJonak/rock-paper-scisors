@@ -74,8 +74,14 @@ function resetGame() {
     computerScoreDisplay.textContent = 0;
 }
 
-function endGame() {
-
+function endGame(playerScore, computerScore) {
+    const choices = document.querySelector('.choices');
+    while(choices.firstChild) {
+        choices.removeChild(choices.firstChild);
+    }
+    choices.textContent = (playerScore > computerScore) ? 'You Win!' 
+                                                        : (playerScore < computerScore) ? 'You Lose!' 
+                                                        : "It's a Tie!";
 }
 
 function playGame() {
@@ -107,6 +113,8 @@ function playGame() {
         if (result === -1) computerScore++;
         displayChoices(playerSelection, computerSelection);
         displayScores(playerScore, computerScore);
+        if (isOver(playerScore, computerScore)) endGame(playerScore, computerScore);
+        
     });
     
     paper_btn.addEventListener('click', () => {
@@ -117,6 +125,7 @@ function playGame() {
         if (result === -1) computerScore++;
         displayChoices(playerSelection, computerSelection);
         displayScores(playerScore, computerScore);
+        if (isOver(playerScore, computerScore)) endGame(playerScore, computerScore);
     });
     
     scissors_btn.addEventListener('click', () => {
@@ -127,6 +136,7 @@ function playGame() {
         if (result === -1) computerScore++;
         displayChoices(playerSelection, computerSelection);
         displayScores(playerScore, computerScore);
+        if (isOver(playerScore, computerScore)) endGame(playerScore, computerScore);
     });
 }
 
