@@ -46,36 +46,36 @@ function getPlayerSelection() {
     }
 }
 
-function game() {
+// function game() {
 
-    let playerScore = 0;
-    let computerScore = 0;
+//     let playerScore = 0;
+//     let computerScore = 0;
 
-    //play 5 rounds of rock paper scissors
-    for (let i = 0; i < 5; i++) {
+//     //play 5 rounds of rock paper scissors
+//     for (let i = 0; i < 5; i++) {
 
-        //get computer and player choices
-        let computerSelection = getComputerChoice();
-        let playerSelection = getPlayerSelection();
+//         //get computer and player choices
+//         let computerSelection = getComputerChoice();
+//         let playerSelection = getPlayerSelection();
         
-        let roundOutcome = playRound(playerSelection, computerSelection);
-        console.log(`You chose: ${playerSelection}, Computer chose: ${computerSelection}`)
+//         let roundOutcome = playRound(playerSelection, computerSelection);
+//         console.log(`You chose: ${playerSelection}, Computer chose: ${computerSelection}`)
 
-        if (!roundOutcome) {
-            console.log("This round is a tie!");
-        } else if (roundOutcome === 1) {
-            console.log("You win this round!");
-            playerScore += 1;
-        } else {
-            console.log("You lose this round!");
-            computerScore += 1;
-        }
+//         if (!roundOutcome) {
+//             console.log("This round is a tie!");
+//         } else if (roundOutcome === 1) {
+//             console.log("You win this round!");
+//             playerScore += 1;
+//         } else {
+//             console.log("You lose this round!");
+//             computerScore += 1;
+//         }
 
-        console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`);
-    }
-    //find overall winner
-    console.log("Game Over!");
-    return ((playerScore > computerScore) ? "You Win!"
-            : (playerScore < computerScore) ? "You Lose!"
-            : "Tie!");
-}
+//         console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`);
+//     }
+//     //find overall winner
+//     console.log("Game Over!");
+//     return ((playerScore > computerScore) ? "You Win!"
+//             : (playerScore < computerScore) ? "You Lose!"
+//             : "Tie!");
+// }
