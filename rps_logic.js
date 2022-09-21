@@ -40,9 +40,23 @@ const rock_btn = document.querySelector('#Rock');
 const paper_btn = document.querySelector('#Paper');
 const scissors_btn = document.querySelector('#Scissors');
 
-rock_btn.addEventListener('click', () => {playRound('Rock', getComputerChoice())});
-paper_btn.addEventListener('click', () => {playRound('Paper', getComputerChoice())});
-scissors_btn.addEventListener('click', () => {playRound('Scissors', getComputerChoice())});
+rock_btn.addEventListener('click', () => {
+    const playerSelection = 'Rock';
+    const computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+});
+
+paper_btn.addEventListener('click', () => {
+    const playerSelection = 'Paper';
+    const computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+});
+
+scissors_btn.addEventListener('click', () => {
+    const playerSelection = 'Scissors';
+    const computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+});
 
 
 
