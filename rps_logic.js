@@ -18,33 +18,51 @@ function playRound(playerSelection, computerSelection) {
     //returns winner of playerSelection and computerSelection in a game of rock paper scissors
 
     if (playerSelection === computerSelection) {
+        console.log(0);
         return 0;
     }
     if (playerSelection === "Paper" && computerSelection === "Scissors") {
+        console.log(-1);
         return -1;
     } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+        console.log(1);
         return 1;
     } else if (playerSelection < computerSelection) {
+        console.log(1)
         return 1;
     } else {
+        console.log(-1);
         return -1;
     }
 }
 
-function getPlayerSelection() {
+const rock_btn = document.querySelector('#Rock');
+const paper_btn = document.querySelector('#Paper');
+const scissors_btn = document.querySelector('#Scissors');
 
-    //use while loop to keep prompting user for a choice if their previous choice is invalid i.e. not one of rock, paper, or scissors
-    while(true) {
-        let playerSelection = prompt("Choose rock, paper, or scissors!");
-        //format playerSelection with only the first letter capitalized
-        playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1, playerSelection.length).toLowerCase();
+rock_btn.addEventListener('click', () => {playRound('Rock', getComputerChoice())});
+paper_btn.addEventListener('click', () => {playRound('Paper', getComputerChoice())});
+scissors_btn.addEventListener('click', () => {playRound('Scissors', getComputerChoice())});
 
-        //return if player made a valid choice
-        if (playerSelection === "Rock" || playerSelection === "Paper" || playerSelection === "Scissors") {
-            return playerSelection;
-        }
-    }
-}
+
+
+
+
+
+// function getPlayerSelection() {
+
+//     //use while loop to keep prompting user for a choice if their previous choice is invalid i.e. not one of rock, paper, or scissors
+//     while(true) {
+//         let playerSelection = prompt("Choose rock, paper, or scissors!");
+//         //format playerSelection with only the first letter capitalized
+//         playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1, playerSelection.length).toLowerCase();
+
+//         //return if player made a valid choice
+//         if (playerSelection === "Rock" || playerSelection === "Paper" || playerSelection === "Scissors") {
+//             return playerSelection;
+//         }
+//     }
+// }
 
 // function game() {
 
