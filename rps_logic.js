@@ -97,8 +97,8 @@ function createChoiceButtons() {
 
 function playGame() {
 
-    let playerScore = 0;
-    let computerScore = 0;
+    playerScore = 0;
+    computerScore = 0;
 
     createChoiceButtons();
 
@@ -137,6 +137,10 @@ function playGame() {
         if (isOver(playerScore, computerScore)) endGame(playerScore, computerScore);
     });
 }
+
+
+let playerScore;
+let computerScore;
 
 const newGameBtn = document.querySelector('#new-game');
 newGameBtn.addEventListener('click', () => {
