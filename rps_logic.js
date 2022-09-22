@@ -64,8 +64,8 @@ function resetGame() {
     computerSelectDisplay.textContent = '';
     playerScoreDisplay.textContent = 0;
     computerScoreDisplay.textContent = 0;
-    playerScore = 0;
-    computerScore = 0;
+    //playerScore = 0;
+    //computerScore = 0;
 }
 
 function endGame(playerScore, computerScore) {
