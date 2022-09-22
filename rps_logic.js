@@ -33,10 +33,10 @@ function playRound(playerSelection, computerSelection) {
 
 function updateDisplay(playerSelection, computerSelection, playerScore, computerScore) {
 
-    const playerSelectionDisplay = document.querySelector('.player-selection');
-    const computerSelectionDisplay = document.querySelector('.computer-selection');
-    const playerScoreDisplay = document.querySelector('.player-score');
-    const computerScoreDisplay = document.querySelector('.computer-score');
+    const playerSelectionDisplay = document.querySelector('#player-selection');
+    const computerSelectionDisplay = document.querySelector('#computer-selection');
+    const playerScoreDisplay = document.querySelector('#player-score');
+    const computerScoreDisplay = document.querySelector('#computer-score');
 
     playerSelectionDisplay.textContent = `${playerSelection}`;
     computerSelectionDisplay.textContent = `${computerSelection}`;
@@ -50,10 +50,10 @@ function isOver(playerScore, computerScore) {
 
 function resetGame() {
 
-    const playerSelectDisplay = document.querySelector('.player-selection');
-    const computerSelectDisplay = document.querySelector('.computer-selection');
-    const playerScoreDisplay = document.querySelector('.player-score');
-    const computerScoreDisplay = document.querySelector('.computer-score');
+    const playerSelectDisplay = document.querySelector('#player-selection');
+    const computerSelectDisplay = document.querySelector('#computer-selection');
+    const playerScoreDisplay = document.querySelector('#player-score');
+    const computerScoreDisplay = document.querySelector('#computer-score');
     const choices = document.querySelector('.choices');
 
     while(choices.firstChild) {
@@ -99,6 +99,9 @@ function createChoiceButtons() {
 
 function playGame() {
 
+    let playerScore = 0;
+    let computerScore = 0;
+
     createChoiceButtons();
 
     const rock_btn = document.querySelector('#Rock');
@@ -137,8 +140,8 @@ function playGame() {
     });
 }
 
-let playerScore;
-let computerScore;
+//let playerScore;
+//let computerScore;
 
 const newGameBtn = document.querySelector('#new-game');
 newGameBtn.addEventListener('click', () => {
