@@ -64,8 +64,6 @@ function resetGame() {
     computerSelectDisplay.textContent = '';
     playerScoreDisplay.textContent = 0;
     computerScoreDisplay.textContent = 0;
-    //playerScore = 0;
-    //computerScore = 0;
 }
 
 function endGame(playerScore, computerScore) {
@@ -139,9 +137,6 @@ function playGame() {
         if (isOver(playerScore, computerScore)) endGame(playerScore, computerScore);
     });
 }
-
-//let playerScore;
-//let computerScore;
 
 const newGameBtn = document.querySelector('#new-game');
 newGameBtn.addEventListener('click', () => {
