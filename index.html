@@ -7,14 +7,27 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div class="container">
+        <div class="page-title"><h1>Rock Paper Scissors</h1></div>
+        <div class="container top">
             <button id="new-game">New Game</button>
         </div>
-        <div class="container">
-            <div id="player-selection" class="display"></div>
-            <div id="player-score" class="display"></div>
-            <div id="computer-score" class="display"></div>
-            <div id="computer-selection" class="display"></div>
+        <div class="container main">
+            <div class="display-box left">
+                <div class="display-title">Player Selection</div>
+                <div id="player-selection" class="display"></div>
+            </div>
+            <div class="display-box">
+                <div class="display-title">Player Score</div>
+                <div id="player-score" class="display"></div>
+            </div>
+            <div class="display-box">
+                <div class="display-title">Computer Score</div>
+                <div id="computer-score" class="display"></div>
+            </div>
+            <div class="display-box right">
+                <div class="display-title">Computer Selection</div>
+                <div id="computer-selection" class="display"></div>
+            </div>
         </div>
         <div class="container choices"></div>
     </body>
