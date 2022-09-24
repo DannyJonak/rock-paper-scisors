@@ -60,8 +60,8 @@ function updateDisplay(playerSelection, computerSelection, playerScore, computer
 
     } else {
 
-        roundOutcome.textContent = (playerScore > computerScore) ? 'Game Over: You Win!'
-                                                                : 'Game Over: You Lose!';
+        roundOutcome.textContent = (playerScore > computerScore) ? 'You Win!'
+                                                                : 'You Lose!';
     }
 }
 
