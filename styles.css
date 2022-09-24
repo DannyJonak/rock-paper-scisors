@@ -116,6 +116,7 @@ body {
 }
 
 #new-game {
+    color: black;
     width: 200px;
     height: 50px;
     font-size: 20px;
@@ -136,12 +137,13 @@ body {
 }
 
 .choice-btn {
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
+    color: black;
+    width: 86px;
+    height: 86px;
+    border-radius: 43px;
     border: 2px solid black;
     background-color: rgb(220, 220, 226);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
 }
 

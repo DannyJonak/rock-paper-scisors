@@ -1,0 +1,299 @@
+[33mcommit 920e4124724ac0e7f2b83ab665fc9f737f850f55[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 23 21:28:41 2022 -0400
+
+    style game over messages
+
+[33mcommit 686000b46edbb63f770d7e0d7e6495b9ee2d8283[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 23 21:24:28 2022 -0400
+
+    style choice buttons
+
+[33mcommit 1e8a84186acbb53ae6ab62f561bd0c87d7628a15[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 23 21:14:12 2022 -0400
+
+    style new game button
+
+[33mcommit d6c3b31479332e55a2b515b1d808bca987da9038[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 23 20:55:25 2022 -0400
+
+    change game result message
+
+[33mcommit ba41b922d564fe64c58d61987b7b513ec9453783[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 23 20:54:04 2022 -0400
+
+    style game over message
+
+[33mcommit 2029469fb27e4ac8b9f1cf256f2855ee2ae5a5ae[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 23 20:45:27 2022 -0400
+
+    update game over message
+
+[33mcommit 6219d63538e8f578de96014e806f4882f9ede542[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 23 20:40:54 2022 -0400
+
+    implement a round outcome message
+
+[33mcommit 4cf85db69516785c17debb478293d5fa6669155c[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 23 20:10:42 2022 -0400
+
+    add and style  div to display outcome of a round
+
+[33mcommit 225f937cc8b122d3bfd27e0efe80a2c8ed46c7e1[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 23 19:17:09 2022 -0400
+
+    style rps game
+
+[33mcommit 40d9c92c4fe74e0f50a785a3dee21bde81232fb6[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 23 17:25:14 2022 -0400
+
+    remove unecessary code
+
+[33mcommit 022346680313aabb437f803f89e9ed7ff0f86bf4[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Thu Sep 22 19:30:57 2022 -0400
+
+    remove playerScore and computerScore from resetGame
+
+[33mcommit 7031dbc25cd8a297edbe5ceae2115a79e8ff81ac[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Thu Sep 22 19:26:22 2022 -0400
+
+    style layout of buttons and display
+
+[33mcommit 43d661a68162cd8886aa93035e3c73d1e5fe06b9[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Thu Sep 22 19:25:30 2022 -0400
+
+    initialize playerScore and computerScore inside og playGame instead of globally
+
+[33mcommit c3258ff803803064aa6fde9e589c6af92b228cf7[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Thu Sep 22 11:47:04 2022 -0400
+
+    change resetGame to also reset player scores instead of resetting in playGame;
+
+[33mcommit 88999827491a64d12f9a028689a617b78fea57da[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Thu Sep 22 11:40:44 2022 -0400
+
+    define computerScore and playerScore outside of playGame
+
+[33mcommit 3288717e93310695461d26677720e0e31ad09e84[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 18:18:53 2022 -0400
+
+    rearrange divs
+
+[33mcommit 22a02409aadda56fcf847f188bcba95cd71c84ba[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 18:15:44 2022 -0400
+
+    fix score display to only show score after a game has started
+
+[33mcommit 3545af2a86aa216215918584d71ab49e5e15425d[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 18:10:38 2022 -0400
+
+    remove old code that was commented out
+
+[33mcommit d40105c9ca746c43b7bd3d0d820829922250201d[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 18:08:55 2022 -0400
+
+    combined displayScore and displayChoices into a single function: updateDisplay
+
+[33mcommit 7d34d9e53e979fdca1ba66cf93bc1b2617f0c9ad[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 18:02:12 2022 -0400
+
+    move code to create the choice buttons to it's own function for cleanliness
+
+[33mcommit 3dc72e0bfceb59561d0845399c769b0efb63e2cd[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 17:55:26 2022 -0400
+
+    update endGame function to display a game over message
+
+[33mcommit cc4f681b9dcd47178b555ac7ef74e19b6147c2dd[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 17:42:20 2022 -0400
+
+    change name of resetDisplay to better decribe what it does
+
+[33mcommit b97d6cfb3de14bf91847e677630f558edb34a901[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 17:39:34 2022 -0400
+
+    fix bug where choice buttons were not removed after restarting game
+
+[33mcommit 74757e268de58d7ae293bda93187f66bd7eadcc1[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 17:32:26 2022 -0400
+
+    moved creation of choice buttons from index file to javascript
+
+[33mcommit 546b8236bfd3aca62800a6ce9414af28dd386a71[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 16:50:37 2022 -0400
+
+    implement function to reset the game display
+
+[33mcommit 4e60172591a0e75dee5f64b9c9101fe8c1c97616[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 16:28:40 2022 -0400
+
+    implement button to start new game
+
+[33mcommit 83c2657a43eef08bb828afd0947314371ff1e562[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 16:03:19 2022 -0400
+
+    display current choices and running score of games
+
+[33mcommit 1f2388aa54e97a32bc3543c22ad74fdd3def95b3[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 15:34:43 2022 -0400
+
+    store player and computer choice when buttons are clicked
+
+[33mcommit 5babaa63d6c8cc60063469ab0af2b0dca8a9e299[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 15:18:13 2022 -0400
+
+    add divs to display results
+
+[33mcommit 4dcaba1bc05b632e9012bce9e846dd9cee1a7c5e[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 15:08:45 2022 -0400
+
+    add buttons to make selection and add event listeners to buttons
+
+[33mcommit 25c5651b580858fd34eedab5798dc84e9fe3e975[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 14:45:08 2022 -0400
+
+    move script tags to head
+
+[33mcommit 84c7381da8fc4181a241539acb573c486982976d[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Wed Sep 21 14:44:06 2022 -0400
+
+    remove function to play 5 rounds
+
+[33mcommit e0e81186c816d584d07369ac0cd986532f10218c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 19:00:10 2022 -0400
+
+    update comments
+
+[33mcommit 829eb6e7231876a6282bfe6a101063d5acf768bb[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 18:56:55 2022 -0400
+
+    update comments
+
+[33mcommit 0e86629d01a506ade0c89ef54db4199ca5615c57[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 18:28:28 2022 -0400
+
+    updated comments
+
+[33mcommit 52353d7f491a56eecf8616d45ebcaa37df48ca0e[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 18:18:46 2022 -0400
+
+    change comment
+
+[33mcommit a41eec59b6ddd1daa05798e2862483acf92399dd[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 18:15:50 2022 -0400
+
+    compute and output overall result of game
+
+[33mcommit 85fe213a55cf96366446136da033847f6fe6f034[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 18:08:35 2022 -0400
+
+    change format of choices
+
+[33mcommit 648e111fbcb9df37c7dd5db3703d6a1793c58266[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 18:01:51 2022 -0400
+
+    implement game function
+
+[33mcommit 14480aca100d404a93f607025c006b926edc6e2a[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 17:41:05 2022 -0400
+
+    update getPlayerSelection to only allow valid choices
+
+[33mcommit a29faa717337a2cbd6f3db7639bd2db99c8d051b[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 17:31:23 2022 -0400
+
+    implement a function to get player selection
+
+[33mcommit 700882fbfab46f26d1c9f4e364194cdf211b4df8[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 17:22:05 2022 -0400
+
+    begin game function to play rock paper scissors
+
+[33mcommit 5fa471ce710c0e41d361fe54a6601f68fb1c5d24[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 17:17:41 2022 -0400
+
+    update return values of playRound
+
+[33mcommit 46c393ccb9326e268852d308bf5be9c54f963878[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Fri Sep 16 16:58:52 2022 -0400
+
+    implement function to play a single round of rock paper scissors
+
+[33mcommit b29914931ecb4f2b3889cef48efee0b5f42d82ee[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Thu Sep 15 17:37:56 2022 -0400
+
+    implement getComputerChoice function
+
+[33mcommit 800400f76b62011f8c1f46b95de51a038e8c48a1[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Thu Sep 15 17:06:05 2022 -0400
+
+    link rps_logic.js to index page
+
+[33mcommit ce601315073a566c63f75f6f207091adcfeb81ab[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Thu Sep 15 17:00:14 2022 -0400
+
+    correct spelling
+
+[33mcommit 65353a3974ec747763674d514ad28368097c6a13[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Thu Sep 15 16:59:30 2022 -0400
+
+    implement standard html boilerplate
+
+[33mcommit 9fe110bb8c24dd5d8607131e2486f2199e69424c[m
+Author: Danny Jonak <dannyjonak@gmail.com>
+Date:   Thu Sep 15 16:56:33 2022 -0400
+
+    create index page and js file to store scripts to run rock paper scisors
+
+[33mcommit 4c99bec11818cec9e0423cf73e7ffe02590d63f8[m
+Author: DannyJonak <98553837+DannyJonak@users.noreply.github.com>
+Date:   Thu Sep 15 16:51:27 2022 -0400
+
+    Initial commit
