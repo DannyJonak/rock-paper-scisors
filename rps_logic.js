@@ -31,17 +31,32 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function updateDisplay(playerSelection, computerSelection, playerScore, computerScore) {
+function updateDisplay(playerSelection, computerSelection, playerScore, computerScore, result) {
 
     const playerSelectionDisplay = document.querySelector('#player-selection');
     const computerSelectionDisplay = document.querySelector('#computer-selection');
     const playerScoreDisplay = document.querySelector('#player-score');
     const computerScoreDisplay = document.querySelector('#computer-score');
+    const roundOutcome = document.querySelector('.display-outcome');
 
     playerSelectionDisplay.textContent = `${playerSelection}`;
     computerSelectionDisplay.textContent = `${computerSelection}`;
     playerScoreDisplay.textContent = `${playerScore}`;
     computerScoreDisplay.textContent = `${computerScore}`;
+
+    switch (result) {
+        case 1:
+            outcomeMessage = `You win this round!`;
+            break;
+        case -1:
+            outcomeMessage = `You lose this round!`;
+            break;
+        case 0:
+            outcomeMessage = `This round's a tie!`;
+            break;
+    }
+
+    roundOutcome.textContent = outcomeMessage;
 }
 
 function isOver(playerScore, computerScore) {
@@ -55,6 +70,7 @@ function resetGame() {
     const playerScoreDisplay = document.querySelector('#player-score');
     const computerScoreDisplay = document.querySelector('#computer-score');
     const choices = document.querySelector('.choices');
+    const roundOutcome = document.querySelector('.display-outcome');
 
     while(choices.firstChild) {
         choices.removeChild(choices.firstChild);
@@ -62,6 +78,7 @@ function resetGame() {
     
     playerSelectDisplay.textContent = '';
     computerSelectDisplay.textContent = '';
+    roundOutcome.textContent = '';
     playerScoreDisplay.textContent = 0;
     computerScoreDisplay.textContent = 0;
 }
@@ -71,9 +88,7 @@ function endGame(playerScore, computerScore) {
     while(choices.firstChild) {
         choices.removeChild(choices.firstChild);
     }
-    choices.textContent = (playerScore > computerScore) ? 'You Win!' 
-                                                        : (playerScore < computerScore) ? 'You Lose!' 
-                                                        : "It's a Tie!";
+    choices.textContent = 'Game Over!'
 }
 
 function createChoiceButtons() {
@@ -110,9 +125,9 @@ function playGame() {
         const playerSelection = 'Rock';
         const computerSelection = getComputerChoice();
         const result = playRound(playerSelection, computerSelection);
-        if (result === 1) playerScore++;
+        if (result === 1) playerScore++; 
         if (result === -1) computerScore++;
-        updateDisplay(playerSelection, computerSelection, playerScore, computerScore);
+        updateDisplay(playerSelection, computerSelection, playerScore, computerScore, result);
         if (isOver(playerScore, computerScore)) endGame(playerScore, computerScore);
         
     });
@@ -123,7 +138,7 @@ function playGame() {
         const result = playRound(playerSelection, computerSelection);
         if (result === 1) playerScore++;
         if (result === -1) computerScore++;
-        updateDisplay(playerSelection, computerSelection, playerScore, computerScore);
+        updateDisplay(playerSelection, computerSelection, playerScore, computerScore, result);
         if (isOver(playerScore, computerScore)) endGame(playerScore, computerScore);
     });
     
@@ -133,7 +148,7 @@ function playGame() {
         const result = playRound(playerSelection, computerSelection);
         if (result === 1) playerScore++;
         if (result === -1) computerScore++;
-        updateDisplay(playerSelection, computerSelection, playerScore, computerScore);
+        updateDisplay(playerSelection, computerSelection, playerScore, computerScore, result);
         if (isOver(playerScore, computerScore)) endGame(playerScore, computerScore);
     });
 }
