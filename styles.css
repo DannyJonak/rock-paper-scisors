@@ -117,7 +117,8 @@ body {
 #new-game {
     width: 200px;
     height: 50px;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 600;
     margin-right: 50px;
     border: 4px solid black;
     border-radius: 8px;
@@ -130,5 +131,23 @@ body {
 }
 
 #new-game:active {
-    border: 6px solid black;
+    border: 5px solid black;
+}
+
+.choice-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    border: 2px solid black;
+    background-color: rgb(220, 220, 226);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.choice-btn:hover {
+    background-color: rgb(209, 209, 218);
+}
+
+.choice-btn:active {
+    border: 3px solid black;
 }

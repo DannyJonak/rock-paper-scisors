@@ -103,12 +103,15 @@ function createChoiceButtons() {
 
     const rock_btn = document.createElement('button');
     rock_btn.setAttribute('id', 'Rock');
+    rock_btn.setAttribute('class', 'choice-btn');
     rock_btn.textContent = 'Rock';
     const paper_btn = document.createElement('button');
     paper_btn.setAttribute('id', 'Paper');
+    paper_btn.setAttribute('class', 'choice-btn');
     paper_btn.textContent = 'Paper';
     const scissors_btn = document.createElement('button');
     scissors_btn.setAttribute('id', 'Scissors');
+    scissors_btn.setAttribute('class', 'choice-btn');
     scissors_btn.textContent = 'Scissors';
 
     choices.appendChild(rock_btn);
