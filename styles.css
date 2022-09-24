@@ -106,3 +106,9 @@ body {
     justify-content: center; 
     height: 160px;
 }
+
+.choices {
+    color: rgb(255, 144, 144);
+    font-size: 36px;
+    font-weight: bold;
+}
