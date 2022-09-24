@@ -44,19 +44,25 @@ function updateDisplay(playerSelection, computerSelection, playerScore, computer
     playerScoreDisplay.textContent = `${playerScore}`;
     computerScoreDisplay.textContent = `${computerScore}`;
 
-    switch (result) {
-        case 1:
-            outcomeMessage = `You win this round!`;
-            break;
-        case -1:
-            outcomeMessage = `You lose this round!`;
-            break;
-        case 0:
-            outcomeMessage = `This round's a tie!`;
-            break;
-    }
+    if (!isOver(playerScore, computerScore)) {
+        switch (result) {
+            case 1:
+                outcomeMessage = `You win this round!`;
+                break;
+            case -1:
+                outcomeMessage = `You lose this round!`;
+                break;
+            case 0:
+                outcomeMessage = `This round's a tie!`;
+                break;
+        }
+        roundOutcome.textContent = outcomeMessage;
 
-    roundOutcome.textContent = outcomeMessage;
+    } else {
+
+        roundOutcome.textContent = (playerScore > computerScore) ? 'Game Over: You Win!'
+                                                                : 'Game Over: You Lose!';
+    }
 }
 
 function isOver(playerScore, computerScore) {
